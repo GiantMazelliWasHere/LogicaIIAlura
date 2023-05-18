@@ -1,0 +1,32 @@
+<canvas width="600" height="400"></canvas>
+
+<Script>
+	
+	var canvas = document.querySelector('canvas');
+	var paintbrush = canvas.getContext('2d');
+
+	//background
+	paintbrush.fillStyle = 'green';
+	paintbrush.fillRect(0, 0, 600, 400);
+
+	//losangolo
+	paintbrush.fillStyle = 'yellow';
+	paintbrush.beginPath();
+	paintbrush.moveTo(300, 50);
+	paintbrush.lineTo(50,200);
+	paintbrush.lineTo(550,200);
+	paintbrush.fill();
+
+	paintbrush.beginPath();
+	paintbrush.moveTo(300,350);
+	paintbrush.lineTo(50,200);
+	paintbrush.lineTo(550,200);
+	paintbrush.fill();
+
+	//circle
+	paintbrush.fillStyle = "darkblue";
+	paintbrush.beginPath();
+	paintbrush.arc(300, 200, 100, 0, 2 * 3.14);
+	paintbrush.fill();
+
+</Script>

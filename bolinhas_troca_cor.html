@@ -1,0 +1,40 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var canvas = document.querySelector('canvas');
+    var paintbrush = canvas.getContext('2d');
+
+    paintbrush.fillStyle = 'grey';
+    paintbrush.fillRect(0, 0, 600, 400);
+    var colors = ['blue', 'red', 'green'];
+    var indexNowColors = 0;
+    
+    function showCircle(event){
+
+        var x = event.pageX - canvas.offsetLeft;
+        var y = event.pageY - canvas.offsetTop;
+
+        paintbrush.fillStyle = colors[indexNowColors];
+        paintbrush.beginPath();
+        paintbrush.arc(x, y, 10, 0, 2 * 3.14);
+        paintbrush.fill()
+        console.log(x + ',' + y);
+        
+    }
+
+    canvas.onclick = showCircle;
+    
+    function changeColor() {
+        
+        indexNowColors++;
+        if(indexNowColors >= color.length) {
+
+            indexNowColors = 0;
+        };
+        return false;
+        
+    }
+    
+    canvas.oncontextmenu = changeColor;
+    
+</script>

@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var canvas = document.querySelector('canvas');
+    var paintbrush = canvas.getContext('2d');
+
+    paintbrush.fillStyle = 'grey';
+    paintbrush.fillRect(0, 0, 600, 400);
+
+    function showCircle(event){
+
+        var x = event.pageX - canvas.offsetLeft;
+        var y = event.pageY - canvas.offsetTop;
+        paintbrush.fillStyle = 'red';
+        paintbrush.beginPath();
+        paintbrush.arc(x, y, 10, 0, 2 * 3.14);
+        paintbrush.fill()
+        console.log(x + ',' + y);
+        
+    }
+
+    canvas.onclick = showCircle;
+
+</script>

@@ -1,0 +1,35 @@
+<canvas width = "600" height = "400"></canvas>
+
+<script>
+
+    var canvas = document.querySelector('canvas');
+    var paintbrush = canvas.getContext('2d');
+
+    function drawSquare(X, y, color){
+
+        paintbrush.fillStyle = color;
+        paintbrush.fillRect(X,y, 50, 50);
+        paintbrush.fillStroke = 'black';
+        paintbrush.strokeRect(X, y, 50, 50);
+
+    }
+
+    /*
+    var x = 0
+    
+    while(x <= 600){
+
+        drawSquare(x, 0, 'red');
+        drawSquare(x, 50, 'white');
+        drawSquare(x, 100, 'pink');
+        x = x + 50
+        
+    }
+    */
+
+    for(var x = 0; x < 600; x = x + 50){
+        drawSquare(x, 0, 'red');
+
+    }
+
+    </script>

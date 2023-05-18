@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<Script>
+	
+	var canvas = document.querySelector('canvas');
+	var paintbrush = canvas.getContext('2d');
+
+	//cabeça
+	paintbrush.fillStyle = 'darkgreen';
+	paintbrush.fillRect(200, 50, 350, 300);
+
+	//olhos
+	paintbrush.fillStyle = 'black';
+	paintbrush.fillRect(250, 110, 90, 90);
+	paintbrush.fillRect(410, 110, 90, 90);
+
+	//nariz
+	paintbrush.fillRect(340, 200, 70, 100);
+
+	//boca
+	paintbrush.fillRect(300, 240, 40, 110);
+	paintbrush.fillRect(410, 240, 40, 110);
+
+</Script>
